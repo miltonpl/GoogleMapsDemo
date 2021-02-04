@@ -17,7 +17,7 @@ The project is implemented using Swift language, The goal of this project is to 
 - UIViewController
 
 ## Gif File
-[Demo1](//https://media.giphy.com/media/DOpWztN0VTiR4afX78/giphy.gif)
+[Demo1](/https://media.giphy.com/media/DOpWztN0VTiR4afX78/giphy.gif)
 
 ---
 # Prerequisites
