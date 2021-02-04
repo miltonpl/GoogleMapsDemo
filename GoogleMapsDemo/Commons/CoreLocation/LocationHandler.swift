@@ -6,7 +6,8 @@
 //
 import CoreLocation
 import UIKit
-protocol LocationHandlerDelegate: AlertHandler {
+
+protocol LocationHandlerProtocol: AlertHandler {
     func userLocation(location: CLLocation)
     func locationDidFailWithError(error: Error)
 }
@@ -22,7 +23,7 @@ class LocationHandler: NSObject {
         return location
     }()
     
-    weak var delegate: LocationHandlerDelegate?
+    weak var delegate: LocationHandlerProtocol?
     // MARK: - Get User Location
     public func getUserLocation() {
         
@@ -41,7 +42,7 @@ class LocationHandler: NSObject {
         let message = "Please give acess to your location"
         switch CLLocationManager.authorizationStatus() {
         case .restricted, .denied:
-            self.callAlertController(title, message, butttons: [.cancel,.settings])
+            self.callAlertController(title, message, butttons: [.cancel, .settings])
         case .authorizedAlways, .authorizedWhenInUse:
             self.locationManager.startUpdatingLocation()
         default: break
@@ -49,7 +50,7 @@ class LocationHandler: NSObject {
     }
     
     private func callAlertController(_ title: String?, _ message: String?, butttons: [ActionType]) {
-        self.delegate?.showAlert(title, message, actions: butttons){ actionType in
+        self.delegate?.showAlert(title, message, actions: butttons) { actionType in
             switch actionType {
             case .settings:
                 UIApplication.openSettings()

@@ -16,7 +16,7 @@ struct ZoomCamera {
     }
     var wrappedValue: Float {
         get {
-            return Float(max(min(Double(value),maxZoom), minZoom))
+            return Float(max(min(Double(value), maxZoom), minZoom))
         }
         set {
             value = newValue

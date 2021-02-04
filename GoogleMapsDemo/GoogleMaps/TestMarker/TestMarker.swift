@@ -22,15 +22,15 @@ enum TestMarder {
     static let place4 = PlaceDetails(address: address4, phone: "44444444", website: "www.example.com")
     static let place5 = PlaceDetails(address: address5, phone: "44444444", website: "www.example.com")
 
-    static let postion1 = CLLocationCoordinate2DMake(-2.9018356,-79.0087052)
-    static let postion2 = CLLocationCoordinate2DMake(-2.8922687,-79.0243996)
-    static let postion3 = CLLocationCoordinate2DMake(-2.8976016,-78.978947)
-    static let postion4 = CLLocationCoordinate2DMake(-2.9060989,-78.9990293)
+    static let postion1 = CLLocationCoordinate2DMake(-2.9018356, -79.0087052)
+    static let postion2 = CLLocationCoordinate2DMake(-2.8922687, -79.0243996)
+    static let postion3 = CLLocationCoordinate2DMake(-2.8976016, -78.978947)
+    static let postion4 = CLLocationCoordinate2DMake(-2.9060989, -78.9990293)
     
     static let marker1 = Marker(name: "G-Grill", placeDetails: place2, coordinate: postion1)
     static let marker2 = Marker(name: "USxx", placeDetails: place3, coordinate: postion2)
     static let marker3 = Marker(name: "Museo Pumapugo", placeDetails: place4, coordinate: postion3)
     static let marker4 = Marker(name: "Park", placeDetails: place5, coordinate: postion4)
 
-    static let markers: [Marker] = [marker1, marker2, marker3,marker4]
+    static let markers: [Marker] = [marker1, marker2, marker3, marker4]
 }

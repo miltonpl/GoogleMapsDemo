@@ -81,12 +81,13 @@ extension ViewController: MapViewDelegate {
     func didTapMyLocationButton(for mapView: GMSMapView) {
         guard let coordinate = self.myLocation?.coordinate else { return  }
         
-        let marker = Marker(name: "Your Location", placeDetails: TestMarder.place1, coordinate:coordinate)
+        let marker = Marker(name: "Your Location", placeDetails: TestMarder.place1, coordinate: coordinate)
 
         self.mapView.addMarkerOnMap(marker: marker, withZoom: 15)
     }
 }
-extension ViewController: LocationHandlerDelegate {
+
+extension ViewController: LocationHandlerProtocol {
     func userLocation(location: CLLocation) {
         self.myLocation = location
     }
@@ -94,6 +95,4 @@ extension ViewController: LocationHandlerDelegate {
     func locationDidFailWithError(error: Error) {
         print("error - \(error.localizedDescription)")
     }
-    
-    
 }

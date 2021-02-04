@@ -193,7 +193,6 @@
 			children = (
 				5285140125CCAE340065C2C1 /* Private */,
 				528513FC25CC803A0065C2C1 /* Extension */,
-				528513F525CC68DD0065C2C1 /* Constant */,
 				528513F025CC67F90065C2C1 /* AlertHandler */,
 				528513EB25CC67950065C2C1 /* CoreLocation */,
 				528513C825CBB69A0065C2C1 /* Constants */,
@@ -212,6 +211,7 @@
 		528513C825CBB69A0065C2C1 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				528513F625CC68EB0065C2C1 /* ActionType.swift */,
 				528513E225CC4A8E0065C2C1 /* ZoomCamera.swift */,
 			);
 			path = Constants;
@@ -250,14 +250,6 @@
 			path = AlertHandler;
 			sourceTree = "<group>";
 		};
-		528513F525CC68DD0065C2C1 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				528513F625CC68EB0065C2C1 /* ActionType.swift */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
 		528513FC25CC803A0065C2C1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +286,7 @@
 				5285138C25CB9A4C0065C2C1 /* Frameworks */,
 				5285138D25CB9A4C0065C2C1 /* Resources */,
 				FC0829E35BEEBD0A352C8D89 /* [CP] Copy Pods Resources */,
+				52F2D95B25CCB81E0060625E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -351,6 +344,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		52F2D95B25CCB81E0060625E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
+		};
 		6F67DC9DC85950E67A38A100 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

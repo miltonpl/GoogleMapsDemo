@@ -7,5 +7,5 @@
 
 import UIKit
 enum ActionType: String {
-    case cancel, settings, delete, ok
+    case cancel, settings, delete
 }

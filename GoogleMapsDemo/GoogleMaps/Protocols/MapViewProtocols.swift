@@ -9,10 +9,10 @@ import UIKit
 import GoogleMaps
 
 enum MapRegionChangedType: Int {
-    case None = 0
-    case Pan
-    case Pinch
-    case InitLocation
+    case none = 0
+    case pan
+    case pinch
+    case initLocation
 }
 
 enum ZoomType {
@@ -27,7 +27,7 @@ protocol MapViewProtocol {
 
 protocol MarkerProtocol {
     func setMarkersOnMap(markers: [GMSMarker], screenEdgeInset edgeInset: UIEdgeInsets)
-    func zoomGoogleMapView(toFitMarkers markers: [GMSMarker],screenEdgeInset edgeInset: UIEdgeInsets)
+    func zoomGoogleMapView(toFitMarkers markers: [GMSMarker], screenEdgeInset edgeInset: UIEdgeInsets)
     func addMarkerOnMap(marker: GMSMarker, withZoom zoom: CGFloat)
 }
 
