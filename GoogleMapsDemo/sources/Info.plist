@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow Goople Maps to use your location to get directions</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Goople Maps to use your location to get directions</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow Goople Maps to use your location to get directions</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

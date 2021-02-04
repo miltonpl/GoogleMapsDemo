@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarkerView" customModule="GoogleMapsDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="Xpk-3F-Tz0" id="Njc-hP-Q3w"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Dia-gN-0Dp"/>
+                <outlet property="titleLabel" destination="3jn-jT-LHA" id="Lb5-GQ-shy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="205"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="269" placeholderIntrinsicHeight="50" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="lkh-p4-vkv">
+                    <rect key="frame" x="2" y="168" width="285" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6M-bF-mgV">
+                            <rect key="frame" x="0.0" y="0.0" width="141.5" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="To Here">
+                                <color key="titleColor" red="0.078437465420000005" green="0.1022965153" blue="0.152258426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="toHere:" destination="-1" eventType="touchUpInside" id="opn-ha-1TB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-SD-m7E">
+                            <rect key="frame" x="143.5" y="0.0" width="141.5" height="35"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="From Here">
+                                <color key="titleColor" red="0.078437465420000005" green="0.1022965153" blue="0.152258426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="fromHere:" destination="-1" eventType="touchUpInside" id="mtz-h0-OAx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="YQk-20-9Nj"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jn-jT-LHA">
+                    <rect key="frame" x="2" y="2" width="285" height="26.5"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpk-3F-Tz0">
+                    <rect key="frame" x="2" y="33.5" width="285" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lkh-p4-vkv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="0Jh-E3-9RK"/>
+                <constraint firstItem="Xpk-3F-Tz0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="EeA-dS-JGt"/>
+                <constraint firstItem="3jn-jT-LHA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="GPY-i6-vrM"/>
+                <constraint firstItem="3jn-jT-LHA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="OrU-nF-pha"/>
+                <constraint firstItem="lkh-p4-vkv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Xpk-3F-Tz0" secondAttribute="bottom" constant="5" id="Rio-gA-1Ja"/>
+                <constraint firstItem="Xpk-3F-Tz0" firstAttribute="top" secondItem="3jn-jT-LHA" secondAttribute="bottom" constant="5" id="Uhb-8g-zOY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3jn-jT-LHA" secondAttribute="trailing" constant="2" id="ZCy-hI-EiN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xpk-3F-Tz0" secondAttribute="trailing" constant="2" id="dDX-S8-wYd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lkh-p4-vkv" secondAttribute="trailing" constant="2" id="geX-8B-klx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lkh-p4-vkv" secondAttribute="bottom" constant="2" id="vaz-9k-1Yo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="168.84057971014494" y="-144.97767857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
